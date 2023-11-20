@@ -23,9 +23,8 @@ def potential_energy():
     print('Your answer is :', Answer)
     return Answer    
 
-
-def electricheat():
 #function for finding electric heat
+def electricheat():
     import os
     os.system('color')
     i =int(input("What's your current?__", ))
@@ -65,15 +64,26 @@ def specific_lh():
 
 #fuction that serves as a junction to all other heat solving functions 
 def solve_heat():
-    hope=input(''' "Choose from"  ,
-    "Electric heat",
-    "Heat w SHC"
-    "Heat w latent heat" ''')
-    if hope == "Heat w SHC" or hope == "heat w shc":
+    print('The available options are:')
+
+    #a list of heat options in normal case
+    options=['Electric heat','Heat w SHC','Heat w latent heat']
+    for option in options:
+         print(f'• {option}')
+
+    #a list of heat options in lowercase
+    set_option1=[item.lower() for item in options]
+
+    #a list for heat options in uppercase 
+    set_option2=[item.upper() for item in options]
+
+    hope=input(''' Choose from the above___''').lower()
+
+    if  hope == set_option1[0] or hope == set_option2[0] or hope == options[0] :
          specific_lh()
-    elif hope == "Electric heat" or hope == "electric heat":
+    elif  hope == set_option1[1] or hope == set_option2[1] or hope == options[1] :
         electricheat()
-    elif hope == "Heat w latent heat" or hope == "heat w latent heat":
+    elif  hope == set_option1[2] or hope == set_option2[2] or hope == options[2] :
         latent_heat()
     else:
         print("Unavailable....")    
@@ -212,22 +222,22 @@ for i in range(7):
 
 
 
-Formula=input('Which formula you wanna use?_______')
+Formula=input('Which formula you wanna use?_______').lower()
 
 
-if Formula == 'Potential energy' or Formula == 'potential energy':
+if Formula == 'potential energy':
      potential_energy()
-elif Formula == 'Kinetic energy' or Formula == 'kinetic enrgy':
+elif  Formula == 'kinetic enrgy':
      kinetic_energy()
-elif Formula == 'Heat Energy' or Formula == 'heat energy':
+elif  Formula == 'heat energy' :
      solve_heat()
-elif Formula == 'Work' or Formula == 'work':
+elif  Formula == 'work':
       work()
-elif Formula == 'Power' or Formula == 'power':
+elif  Formula == 'power':
       power()
-elif Formula == 'Velocity' or Formula == 'velocity':
+elif  Formula == 'velocity':
      velocity()
-elif Formula == 'Acceleration' or Formula == 'acceleration':
+elif  Formula == 'acceleration':
      acc_ler8()
 else : 
     print("Unfrotunately, the formula you requested is unavailable..")     

@@ -112,19 +112,19 @@ def display_equ():
 
     print ("If you desire the last 5 on the list, please select 'Other' to continue.")
 
-    desire_equation=str(input("Which equations/law do you want to display  ")).lower
+    desire_equation=str(input("Which equations/law do you want to display  ")).lower()
 
-    if desire_equation == "charle's law" or desire_equation == "Charle's law":
+    if desire_equation == "charle's law" :
            charles_law()
-    elif desire_equation == "equations of motion" or desire_equation == "Equations of motion":
+    elif desire_equation == "equations of motion" :
            motion_equ()
-    elif desire_equation == "boyle's law" or desire_equation == "Boyle's law" or desire_equation == "boyle law" or desire_equation == "Boyle law":
+    elif desire_equation == "boyle's law" or  desire_equation == "boyle law" :
            boyles_law()
-    elif desire_equation == "ideal gas equation" or desire_equation == "Ideal Gas Equation" or desire_equation == "Ideal gas equation":
+    elif desire_equation == "ideal gas equation" :
            ideal()
-    elif desire_equation == "Ohm's law " or desire_equation == "Ohm law" or desire_equation == "ohm law" or desire_equation == "ohm's law":
+    elif desire_equation ==  desire_equation == "ohm law" or desire_equation == "ohm's law":
            ohm()   
-    elif desire_equation == 'Other' or desire_equation == 'other':
+    elif  desire_equation == 'other':
            print_law()  
     else:
         print("Unavailable equation or law")
@@ -138,7 +138,7 @@ def display_equ():
 
 print ('\033[1m'  +  " Welcome to Sango, your solution to the headache of physics.", '\n' , "Please know that this is a beta release,",'\n',
 "There will be some unavailable things but please be patient with us", '\n',
-"From yours truly, Neo" + '\033[0m')
+"From yours truly, Ij" + '\033[0m')
 
 #allow user to pick function 
 '\n'
